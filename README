@@ -1,0 +1,38 @@
+Simple blog system with the following features:
+Post CRUD: Create, read, update and delete posts.
+Simple Web Interface: A web interface to view and manage posts.
+Database: We will use an H2 database (in memory) to store post data.
+Project Structure
+Post: Class that represents a blog post.
+PostRepository: Interface that manages the persistence of posts.
+PostController: Controller that manages HTTP requests related to posts.
+Templates: We will use Thymeleaf to render HTML pages.
+Prerequisites
+Java 17 or higher.
+Maven (for dependency management).
+IDE like IntelliJ IDEA or Eclipse.
+Steps to Create the Project
+Create the Project with Spring Boot:
+
+Use Spring Initializr to generate the project with the dependencies:
+Spring Web
+Spring Data JPA
+H2 Database
+Thymeleaf
+Package Structure:
+
+com.example.blog (main package)
+controller (for the controller)
+model (for the Post class)
+repository (for the repository)
+
+Code Explanation
+Post: This is the model class that represents blog posts.
+
+PostRepository: This is a JPA repository that allows you to perform CRUD operations on posts.
+
+PostController: This is a controller that manages post routes and actions, including listing, creation, editing, and deletion.
+
+Thymeleaf Templates: These are used to render the user interface for the different blog features.
+
+H2 Database: This is an in-memory database that is used to simplify development and testing.

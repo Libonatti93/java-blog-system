@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Posts</title>
+</head>
+<body>
+<h1>Posts</h1>
+<a href="/posts/new">Novo Post</a>
+<table>
+    <thead>
+    <tr>
+        <th>Título</th>
+        <th>Conteúdo</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="post : ${posts}">
+        <td th:text="${post.title}">Título</td>
+        <td th:text="${post.content}">Conteúdo</td>
+        <td>
+            <a th:href="@{/posts/edit/{id}(id=${post.id})}">Editar</a>
+            <a th:href="@{/posts/delete/{id}(id=${post.id})}">Deletar</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
